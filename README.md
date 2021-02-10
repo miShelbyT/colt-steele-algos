@@ -1,0 +1,1 @@
+Everything written here is/are code snippets lovingly borrowed from Colt Steele's Udemy algo course, taken in 2021.
