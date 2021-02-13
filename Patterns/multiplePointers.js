@@ -31,4 +31,4 @@ function sumZero(arr) {
 
 console.log(sumZero([-7, 2, 3, 6, 8, 9]))
 
-  console.log("hi")
+console.log("hi")

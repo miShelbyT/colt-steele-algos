@@ -18,10 +18,10 @@ function anagramChecker(str1, str2){
   
    for (let key in anagramObj1) {
      if (!(key in anagramObj2)) {
-       console.log("oops not a match here");
+      //  console.log("oops not a match here");
        return false;
      } if (anagramObj2[key] !== anagramObj1[key]) {
-       console.log("oops not a match here either");
+      //  console.log("oops not a match here either");
        return false;
      }
    }
