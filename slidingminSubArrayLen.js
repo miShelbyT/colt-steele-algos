@@ -23,10 +23,12 @@ function minSubArrayLen(arr, sum) {
     if (tempSum < sum && right < arr.length) {
       tempSum += arr[right]
       right++
+      // once current total >= to sum we can slide the window over and check the sum
     } else if (tempSum >= sum) {
       minArrayLen = Math.min(minArrayLen, (right - left));
       tempSum -= arr[left]
       left++
+      // we will bounce back and forth between these two conditions and end up with the shortest array length once we've iterated thru the array. because left will never be >= arr.length we have to break out of the the loop
     } else {
       break
   }

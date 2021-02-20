@@ -1,28 +1,50 @@
-// write function that takes a string and returns the longest substring of consecutive/unique chars
+// write function that takes a string and returns the longest substring's length of consecutive/unique chars
 
 function findLongestSubstring(str){
-  let maxStr = "";
-  let tempStr = "";
+  
   if(str.length === 0) return 0;
 
-  for(let char of str) {
-    while(!maxStr.includes(char)){
-      maxStr += char;
+  let set  = new Set()
+  let left = 0
+  let right = 0
+  let maxLen = 1
+
+  while(right < str.length) {
+    console.log(set, left, right, maxLen)
+    if (!set.has(str[right])) {
+      set.add(str[right])
+      maxLen = Math.max(maxLen, right - left + 1)
+      right ++
+    } else if (set.has(str[right]) && str[right] === str[left]) {
+      left ++
+      right ++
+    } else {
+      set.delete(str[left])
+      left ++
     }
+  }
+return maxLen;
 }
 
-tempStr = maxStr ;
-for(let i = tempStr.length; i < str.length; i ++) {
-  
-  if(!tempStr.includes(str[i])) {
-    tempStr = tempStr.slice(1);
-    tempStr += str[i];
-    maxStr = Math.max(maxStr.length, tempStr.length);
-  }
-}
-return maxStr.length;
-}
+// Colt Steele's solution. not really understanding this problem....
+// function findLongestSubstring(str) {
+//   let longest = 0;
+//   let seen = {};
+//   let start = 0;
+ 
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (seen[char]) {
+//       start = Math.max(start, seen[char]);
+//     }
+//     // index - beginning of substring + 1 (to include current in count)
+//     longest = Math.max(longest, i - start + 1);
+//     // store the index of the next char so as to not double count
+//     seen[char] = i + 1;
+//   }
+//   return longest;
+// }
 
 console.log(findLongestSubstring(""))
 
-console.log(findLongestSubstring("abbbcd"))
+console.log(findLongestSubstring("dogsarethebestpeople"))
