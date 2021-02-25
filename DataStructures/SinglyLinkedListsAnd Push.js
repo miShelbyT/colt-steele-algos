@@ -18,15 +18,18 @@ class SinglyLinkedList {
 
   push(val){
     let newNode = new Node(val)
+    // in case of empty list
     if(!this.head) {
       this.head = newNode
       this.tail = this.head
     } else {
+      // .next adds next which points to newNode
       this.tail.next = newNode
       this.tail = newNode
     }
     this.length += 1
     return this
+    // this is the entire list!
   }
 }
 
