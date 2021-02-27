@@ -1,4 +1,4 @@
-// given two strings, write function that returns true if the strings are anagrams of each other. use frequency counter, not a nested loop, to reduce time complexity!
+// FREQUENCY COUNTER -- given two strings, write function that returns true if the strings are anagrams of each other. use frequency counter, not a nested loop, to reduce time complexity!
 
 
 function anagramChecker(str1, str2){
@@ -31,8 +31,6 @@ function anagramChecker(str1, str2){
 console.log(anagramChecker("yahppiiy", "yhappy"))
 
 console.log("hi")
-// why aren't console.logs printing to console?
-
 
 // // could also have used regular for loops and worked off of a single object, nice simple solution:
 

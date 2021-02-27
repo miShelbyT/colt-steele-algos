@@ -55,6 +55,7 @@ function areThereDuplicates(...args) {
 // one-liner
 
 // function areThereDuplicates() {
+  // Set can not hold duplicates of any element
 //   return new Set(arguments).size !== arguments.length;
 // }
 

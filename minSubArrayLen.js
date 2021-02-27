@@ -1,4 +1,4 @@
-// write a function that accepts two parameters - an array of positive ints and one positive int. return the minimal length of a contiguous subarray that is greater to or === to the int. if nothing matches this deliv, return 0.
+// SLIDING WINDOW -- write a function that accepts two parameters - an array of positive ints and one positive int. return the minimal length of a contiguous subarray that is greater to or === to the int. if nothing matches this deliv, return 0.
 
 
 // need 4 variables: 

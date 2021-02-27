@@ -1,0 +1,29 @@
+FREQUENCY COUNTER checks two separate arrays or strings to check for certain conditions. i.e., anagram or all nums in the second array are the squared of the first
+
+MULTIPLE POINTERS creates pointers corresponding to index or position and move towards beginning, middle or end to check a certain condition. 
+** Only works on sorted lists.
+
+SLIDING WINDOWS involves creating a window which can be an array or number from one position to another. dependent on certain conditions, the window can increase or close. useful for keeping track of a subset of data.
+
+DIVIDE AND CONQUER -- divides a data set into smaller chunks and then repeating the process with a subset of data - this pattern can tremendously decrease time complexity (when does correctly).
+
+
+RECURSIVE functions, we will invoke the same function over and over in a different way, until we reach our base case: the point where the function stops/breaks out
+
+Helper Method Recursions - the helper method that is called INSIDE the outer function is the one that is recursive:
+
+i.e.,
+
+
+function outer(input) {
+
+  let outerScopedVariable = []
+
+  function helper(helperInput) {
+    helper(helperInput--)
+  }
+helper(input)
+
+return outerScopedVariable
+
+}

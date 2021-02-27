@@ -24,20 +24,19 @@ function capitalizeFirst(array) {
 
 
 // PURE RECURSION
-// function capitalizeFirst(array) {
-//   let newArray = []
+function capitalizeFirst(array) {
+  let newArray = []
 
-//     if (array.length === 0) return newArray;
+    if (array.length === 0) return newArray;
 
-//     let newWord = array.slice(0, 1)
-//     newWord = newWord.toString().charAt().toUpperCase() + newWord.toString().slice(1)
-//     // console.log(newWord)
-//     // console.log(typeof newWord)
-//     newArray.push(newWord)
-//     // console.log(newArray)
-//     // .concat() carries the values from the previous iterations so we don't overwrite with .push()
-//   return newArray.concat(capitalizeFirst(array.slice(1)));
-// }
+    let newWord = array[0]
+    newWord = newWord.charAt().toUpperCase() + newWord.slice(1)
+    
+    newArray.push(newWord)
+
+    // .concat() carries the values from the previous iterations so we don't overwrite with .push()
+  return newArray.concat(capitalizeFirst(array.slice(1)));
+}
 
 console.log(capitalizeFirst(['car', 'taco', 'banana'])); // ['Car','Taco','Banana']
 

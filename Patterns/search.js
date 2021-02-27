@@ -1,5 +1,4 @@
-// divides a data set into smaller chunks and then repeating the process with a subset of data - this pattern can tremendously decrease time complexity (when does correctly).
-
+// DIVIDE AND CONQUER -- divides a data set into smaller chunks and then repeating the process with a subset of data - this pattern can tremendously decrease time complexity (when does correctly).
 
 
 // this function takes an array of SORTED integers and a num, and returns the index where that num value is located inside the array
@@ -27,9 +26,11 @@ function search(arr, val) {
     // let currentElement = arr[middle]
 
     if (arr[middle] < val) {
+      // we can ignore everything to the left of arr[middle]
       min = middle + 1
     }
     else if (arr[middle] > val) {
+      // we need to look to the left of arr[middle] because we overshot it
       max = middle - 1
     }
     else {

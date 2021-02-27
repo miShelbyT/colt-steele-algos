@@ -21,3 +21,17 @@ SOLVE/SIMPLIFY
 
 
 LOOK BACK AND REFACTOR
+
+
+function power(num, exp){
+  if(exp === 0) return 1;
+  return num * power(num, (exp - 1));
+}
+
+power(2,4)
+
+return 2 * power(2,3)
+              return 2 * power(2,2)
+                              return 2 * power(2,1)
+                                            return 2 * power(2,0)
+                                                            return 1

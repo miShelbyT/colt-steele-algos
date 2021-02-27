@@ -1,4 +1,4 @@
-// check to see if two arrays are the same in frequency/value. in this case, arr2 should be squared value of arr1
+// FREQUENCY COUNTER -- check to see if two arrays are the same in frequency/value. in this case, arr2 should be squared value of arr1
 
 // // this is a "naive" solution - time complexity: O(n^2) because of the nested loops (for loop and indexOf). 
 // function same(arr1, arr2) {
@@ -35,9 +35,11 @@ function same(arr1,arr2) {
       frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
     }
     for (let key in frequencyCounter1) {
+      // quick test to see if squared key exists in second array
       if(!(key ** 2 in frequencyCounter2)) {
         return false
       }
+      // second test to see if the values match for key / key ** 2
       if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
         return false
       }
