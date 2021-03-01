@@ -1,1 +1,1 @@
-Everything written here is/are code snippets lovingly borrowed from Colt Steele's Udemy algo course, taken in 2021.
+##These are notes and code snippets lovingly borrowed/worked thru from Colt Steele's Udemy algo course, taken in Feb/Mar 2021.

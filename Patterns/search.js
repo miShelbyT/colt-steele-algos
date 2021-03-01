@@ -19,6 +19,7 @@
 // we chunk the array in half! middle is the index ~ halfway thru the arr (using Math.floor) if arr[middle < val] we increase the min index by one and "chunk what's left of" the array in half again (we haven't actually mutated the arry ay btw). if it is more than val (i.e., if we overshot the amouont of val) we decrease the middle index by 1. This way we don't have to iterate thru the whole array at all!
 function search(arr, val) {
   let min = 0
+  // we subtract one bc indices start at 0
   let max = arr.length - 1
 
   while (min <= max) {
@@ -26,17 +27,18 @@ function search(arr, val) {
     // let currentElement = arr[middle]
 
     if (arr[middle] < val) {
-      // we can ignore everything to the left of arr[middle]
       min = middle + 1
+      // this restarts the above loop with a smaller chunk. we know we can ignore everything to the left of arr[middle]
     }
     else if (arr[middle] > val) {
-      // we need to look to the left of arr[middle] because we overshot it
+      // here we know we need to look to the left of arr[middle] because we overshot it. loop starts again
       max = middle - 1
     }
     else {
       return middle
     }
   }
+  // this is in case the val doesn't exist in the arr
   return -1
 }
 
