@@ -7,10 +7,10 @@ function sumRange(num) {
 
 
 console.log(sumRange(3))
-
+// returns 6
 // sumRange(3)
-//      return 3 + sumRange(2)
-//                      return 2 + sumRange(1)
-//                                      return 1
+//      returns 3 + sumRange(2) ===> 3 + 3 = 6
+//                      returns 2 + sumRange(1) ===>  2 + 1 = 3
+//                                      returns 1
 
 // as items are returned, the function comes off the callstack and the return value is supplied - callstack actually looks like the inverse of what is above because items are placed (pushed) on the top of the stack and also removed (popped) from the top of the stack

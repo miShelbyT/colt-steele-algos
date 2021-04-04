@@ -8,7 +8,7 @@ function maxSubarraySum(arr, num){
   let total = 0;
   for(let i = 0; i < num; i ++) {
     total += arr[i];
-      // only one small iteration, if num = 3, total would be indexes 0, 1, 2
+      // only one small iteration to determine the first subarray, if num = 3, total would be indexes 0, 1, 2
   }
   let tempTotal = total;
   for(let i = num; i < arr.length; i ++) {

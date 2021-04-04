@@ -21,3 +21,7 @@ function isAlphaNumeric(char) {
   }
   return true
 }
+
+
+
+console.log(charCount("hippopotomus"))

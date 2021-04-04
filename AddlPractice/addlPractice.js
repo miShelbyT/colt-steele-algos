@@ -42,7 +42,9 @@ fullName(){
   }
 
   calculateAverage(){
+    // add up scores using .reduce()
     let sum = this.scores.reduce((a,b) => a + b)
+    // average of scores === sum total / number of scores
     return sum / this.scores.length
   }
 

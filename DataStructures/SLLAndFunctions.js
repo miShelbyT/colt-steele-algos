@@ -60,7 +60,7 @@ class SinglyLinkedList {
     return current
   }
 
-  // shift is easy to implement and uses O(1), Constant Time.
+  // shift (removing first element) is easy to implement and uses O(1), Constant Time.
 
   // if empty do nothing. temp = head, head = head.next, delete temp, return temp
   //does not take arguments bc we are deleting the first node, not passing anything thru
@@ -95,7 +95,7 @@ class SinglyLinkedList {
   }
 
 
-  // function accepts index (we want to retrieve the val)
+  // function accepts index (we want to retrieve the val at that index)
   // if idx < 0 or >= this.length, return null
   // iterate thru the list using a counter. when we get to counter === idx, return val
   get(idx) {
@@ -106,6 +106,7 @@ class SinglyLinkedList {
       current = current.next
       counter++
     }
+    // once counter === idx we break out of while loop and return current which is the val
     return current
   }
 
@@ -134,3 +135,9 @@ console.log(list)
 // first.next.next = new Node("friend")
 
 
+// .insert() pseudocode: if index <= 0 || index > list.length return false
+// if index === length, use .push() method.
+// if index === 0, use .unshift() method.
+
+// let newItem = new Node(val), use .get() method. attach newItem to index at .get() and attach .get() - 1 to newItem
+// length ++ and return true (if successfully inserted)

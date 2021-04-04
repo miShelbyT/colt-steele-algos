@@ -19,7 +19,7 @@ function minSubArrayLen(arr, sum) {
   let minArrayLen = arr.length + 1
 
   while (left < arr.length) {
-    console.log("left", left, "right", right, "tempSum", tempSum)
+    // console.log("left", left, "right", right, "tempSum", tempSum)
     if (tempSum < sum && right < arr.length) {
       tempSum += arr[right]
       right++

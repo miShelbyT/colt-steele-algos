@@ -28,6 +28,7 @@ function findLongestSubstring(str){
   let maxLen = 0
 
   while(right < str.length) {
+    // can also use str.charAt(right) - this is very descriptive!
     if (!set.has(str[right])) {
       set.add(str[right])
       // console.log(set)

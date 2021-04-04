@@ -5,3 +5,5 @@ function printAllPairs(n) {
       }
   }
 }
+// nested loops, quadratic time complexity O(N^2)
+// console.log(printAllPairs(24))
