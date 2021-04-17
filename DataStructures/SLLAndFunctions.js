@@ -45,7 +45,7 @@ class SinglyLinkedList {
       // if there is no current.next, meaning we're at the end, it will return falsey and we'll exit the loop
       newTail = current
       current = current.next
-      // current moves one space ahead of newTail
+      // current moves one space ahead of newTail so at the end we'll be able to return the element being "popped"
     }
     // here we've left the loop so we know there is no current.next
     this.tail = newTail
