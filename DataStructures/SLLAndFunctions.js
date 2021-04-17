@@ -118,26 +118,43 @@ class SinglyLinkedList {
     }
     return false
   }
+
+  // .insert() pseudocode: if index < 0 || index > list.length return false
+  // if index === list.length, use .push() method.
+  // if index === 0, use .unshift() method.
+
+  // let newItem = new Node(val), use .get() method. attach newItem to index at .get() and point .get() index - 1.next to newItem
+  // length ++ and return true (if successfully inserted)
+
+  insert(idx, val) {
+    if (idx < 0 || idx > this.length) return false;
+    if (idx === this.length) {
+      this.push(val); //or can return !!this.push(val) which gives us the boolean value of the element
+      return true
+    }
+    if (idx === 0) return !!this.unshift(val); //as per above this returns the boolean value of the element
+    
+    let previous = this.get(idx - 1)
+    // this keeps previous.next from being overwritten
+    let temp = previous.next
+    let newNode = new Node(val)
+    previous.next = newNode
+    newNode.next = temp
+    this.length++
+    return true
+  }
 }
 
 let list = new SinglyLinkedList()
-console.log(list.push("hi"))
-console.log(list.push("shelby"))
-console.log(list.push("you"))
-console.log(list.push("are"))
-console.log(list.push("awesome!!"))
+list.push("hi")
+list.push("shelby")
+list.push("you")
+list.push("are")
+list.push("awesome!!")
 
-console.log(list.shift())
-console.log(list)
+console.log(list.insert(4, "super"))
+console.log(list.insert(0, "heyyyyy"))
+console.log(list.insert(6, "heyyyyy"))
+// console.log(list)
+console.log(list.tail)
 
-// var first = new Node("Hi")
-// first.next = new Node("there")
-// first.next.next = new Node("friend")
-
-
-// .insert() pseudocode: if index <= 0 || index > list.length return false
-// if index === length, use .push() method.
-// if index === 0, use .unshift() method.
-
-// let newItem = new Node(val), use .get() method. attach newItem to index at .get() and attach .get() - 1 to newItem
-// length ++ and return true (if successfully inserted)
