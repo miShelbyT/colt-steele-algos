@@ -133,7 +133,7 @@ class SinglyLinkedList {
       return true
     }
     if (idx === 0) return !!this.unshift(val); //as per above this returns the boolean value of the element
-    
+
     let previous = this.get(idx - 1)
     // this keeps previous.next from being overwritten
     let temp = previous.next
@@ -143,6 +143,67 @@ class SinglyLinkedList {
     this.length++
     return true
   }
+
+  // .remove(idx) use .get(idx) to "get" that node. set it to a variable to return it. use .get(idx - 1) and set its .next to the above variable.next. and return the removed element
+
+  remove(idx) {
+    if (idx < 0 || idx >= this.length) return null;
+    if(idx === this.length-1) return this.pop()
+    if(idx === 0) return this.shift()
+    
+    let previous = this.get(idx - 1)
+    let removed = previous.next
+    previous.next = removed.next
+    this.length--
+    return removed
+  }
+// .reverse() set head and tail. variable called next, one called previous and one called current.
+reverse(){
+  // as per ush, node is our placeholder var here so this.tail can point to our original this.head. but we will also use it below as our "current" node. we have current, previous and next vars that will change to reverse the LL in place.
+  let node = this.head
+  this.head = this.tail
+  this.tail = node
+  let previous = null;
+  let next;
+  for(let i = 0; i < this.length; i++) {
+    // notes below take in each loop
+
+    // node starts off as node 1
+
+    // next starts off as node 2
+    // next is now node 3 (because node is now node 2)
+    // ...and so on...
+    next = node.next
+
+    // node is our tail, .next points to null, as the tail should (when viewing it as reversed in place)
+    // node.next points to node 1 (from the previou)
+    // ...and so on...
+    node.next = previous
+
+    // now previous = node 1
+    // now previous = node 2
+    // ...and so on...
+    previous  = node
+
+    // node iterates to = node 2 (and we iterate again)
+    // node is now node 3 (from beginning of this iteration)
+    // ...and so on...
+    node = next
+}
+return this
+}
+
+// simple/easy function to view our linked list as an array
+print(){
+  let arr = []
+  let current = this.head
+  while(current){
+    arr.push(current.val)
+    current = current.next
+  }
+  console.log(arr)
+}
+
 }
 
 let list = new SinglyLinkedList()
@@ -151,10 +212,13 @@ list.push("shelby")
 list.push("you")
 list.push("are")
 list.push("awesome!!")
+list.push("~~")
 
-console.log(list.insert(4, "super"))
-console.log(list.insert(0, "heyyyyy"))
-console.log(list.insert(6, "heyyyyy"))
+// console.log(list.remove(4))
+// console.log(list.insert(0, "heyyyyy"))
+// console.log(list.insert(6, "heyyyyy"))
 // console.log(list)
-console.log(list.tail)
+console.log(list.print())
+console.log(list.reverse())
+console.log(list.print())
 

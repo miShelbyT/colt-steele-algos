@@ -1,0 +1,15 @@
+Big O of SLLs (as compared to arrays):
+
+Insertion: O(1) time
+- for arrays: O(N) bc to insert you'll have to re-index the entire array. particularly if you are inserting towards the beginning.
+
+Removal: if removing from beginning, O(1). Otherwise O(N) because you may have to iterate thru up to one whole time
+Arrays: O(N) same as above
+
+Searching: O(N) could be last or second to last item. but will only have to iterate once.
+Arrays: O(1) because of indexing (indexOf)
+
+Access: same as Searching
+Arrays: O(1) same as Searching
+
+Remember: SLLs aren't indexed. Elements are connected to each other thru their .next
