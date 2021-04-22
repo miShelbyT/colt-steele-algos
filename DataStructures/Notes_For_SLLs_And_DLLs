@@ -13,3 +13,7 @@ Access: same as Searching
 Arrays: O(1) same as Searching
 
 Remember: SLLs aren't indexed. Elements are connected to each other thru their .next
+
+**************
+
+DLLs take up more memory but also allow for more flexibility
