@@ -24,4 +24,4 @@ function isAlphaNumeric(char) {
 
 
 
-console.log(charCount("hippopotomus"))
+console.log(charCount("hippOpotomus"))

@@ -30,6 +30,7 @@ function capitalizeFirst(array) {
     if (array.length === 0) return newArray;
 
     let newWord = array[0]
+    // .charAt() defaults to the 0th index. here we uppercase the first work and add on the rest of the word using .slice()
     newWord = newWord.charAt().toUpperCase() + newWord.slice(1)
     
     newArray.push(newWord)
