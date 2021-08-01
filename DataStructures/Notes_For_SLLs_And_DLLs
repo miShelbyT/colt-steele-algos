@@ -1,4 +1,4 @@
-Big O of SLLs (as compared to arrays):
+Big O of SLLs & DLLs (as compared to arrays):
 
 Insertion: O(1) time
 - for arrays: O(N) bc to insert you'll have to re-index the entire array. particularly if you are inserting towards the beginning.
@@ -16,4 +16,12 @@ Remember: SLLs aren't indexed. Elements are connected to each other thru their .
 
 **************
 
-DLLs take up more memory but also allow for more flexibility
+DLLs take up more memory (due to saving prev and next) but also allow for more flexibility
+
+Insertion: O(1) time same as SLLs
+
+Removal: O(1) because you can access elements from beginning or end depending on the index, we check by .length / 2
+
+Searching: rounded to O(N) -- but really O(N / 2) because we check by .length / 2
+
+Access: same as Searching

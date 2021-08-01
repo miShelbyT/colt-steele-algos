@@ -17,9 +17,9 @@ function isPalindrome(str) {
 }
 
 
-console.log(isPalindrome('awesome'))
+console.log(isPalindrome('amanappanama'))
 
-console.log("hi shelby!!")
+// console.log("hi shelby!!")
 
 
 // CS solution:
