@@ -1,0 +1,13 @@
+Big O for Stacks & Queues (reminder that stacks are LIFO / queues are FIFO):
+
+Insertion/Removal O(1) - constant time
+(if we have a LOT of data, we will always add/remove from front of stack for constant time, 
+in this case we would use a SLL instead of an array
+
+for queues we will add to tail and remove from head for superior Big O
+
+)
+
+Searching and Accessing O(N) - we don't really use search/access in stacks or queues
+
+

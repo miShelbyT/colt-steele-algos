@@ -1,0 +1,4 @@
+There are several types of trees: trees, binary trees, binary search trees
+Trees consist of nodes in a parent/child (heirarchical) relationship
+
+We mostly implement operation on BSTs
