@@ -1,4 +1,37 @@
-There are several types of trees: trees, binary trees, binary search trees
-Trees consist of nodes in a parent/child (heirarchical) relationship
+There are several types of trees: trees, binary trees, binary search trees. We will mostly implement operations on BSTs
+BST is a special type of BT which is a particular type of Tree
+Binary Tree: each node can have up to two children
+Binary Search Tree: stores data that can be compared. order is important: every item that is less than parent node is on the left. greater than is on the right. 
+this rule applies all the way up to the root. so EVERY node to the right of the root must be larger, even nodes several layers in. 
+same applies to the left, all nodes must be less than the parent/grandparent etc.
 
-We mostly implement operation on BSTs
+we use BSTs because they are sorted and thus very easy to search. we use a binary search method. very good for Big O.
+
+
+Trees consist of nodes in a parent/child (heirarchical) relationship. Each node must point to a child, cannot point to a sibling node or another node on same level.
+
+A tree has one root node (it cannot have more than one root). the root points to child nodes, either one or more, which in turn may point to their own child node(s).
+The nodes can store anything from numbers to strings to other types of data.
+
+Lists are linear (i.e., one line. one path). Trees are non-linear, they can branch so we can have many paths.
+
+root: top node of tree
+child: directly connected to parent node. must be pointing away from root.
+parent: inverse of child definition.
+sibling: nodes that have same parent
+leaf: node with no children
+edge: connection (path) between one node and another
+
+
+Real World Use Cases:
+the DOM (HTML document object model in the browser) is a tree. Each node on the DOM is an object
+parsed JSON is a tree!
+network routing is a tree (check wikipedia for more info)
+abstract syntax tree
+AI uses trees (called minimax). if you break down tic tac toe options the AI can build out a strategy.
+folders in an operating system are set up using a tree structure
+
+Big O of BSTs: Insertion and Searching -- this is not guaranteed but generally it has time complexity of O(log n)
+
+if we double the number of nodes in a BST we only add one more layer to the height. so the time complexity grows very slowly, we only need one more step in our searching algorithm
+
