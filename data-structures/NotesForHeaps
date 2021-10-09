@@ -1,0 +1,18 @@
+Max Binary Heap:
+root is always the largest
+each parent has at most two children.
+children of node are always smaller in value than the parent. 
+no relationship between siblings (unlike a binary search tree where right node must be larger than left node)
+
+Min binary heap is the opposite:
+root is always the smallest
+children of node are always larger in value than the parent. 
+once again, no relationship between siblings 
+
+a binary heap is as compact as possible: all children of each node are as full as they can be (while still adhering to the rules)
+left children are filled out first
+
+heaps are commonly used with Priority Queues and graph traversal
+
+removal from a heap means extracting the root (top node) and then re-settling the rest of the heap. also called sink down, 
+down heap, bubble down, percolate down and a slew of other things.
