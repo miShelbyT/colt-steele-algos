@@ -43,11 +43,10 @@ class maxBinaryHeap {
       // this.values[idx] = parent
 
       // can i use ES6 to state it this way? i believe i can! swappy swap
-      ;[this.values[parentIdx], this.values[idx]] = [childEl, parentEl]
+      [this.values[parentIdx], this.values[idx]] = [childEl, parentEl]
       // here we are resetting the child index. at the top of the loop we reset the parent index as per our new child idx
       idx = parentIdx
     }
-    console.log("inserting, this is the length", this.values.length)
     return this
   }
 
@@ -56,11 +55,13 @@ class maxBinaryHeap {
   //then compare with its children and swap with whichever one is larger. continue the process until we are done
   remove() {
     let oldRoot = this.values[0]
-
-    if(this.values.length > 1) {
-      this.values[0] = this.values.pop()
+    //if length is 1 this will remove the one final node
+    let end = this.values.pop()
+    //this keeps us from adding the 1 node back into an empty heap
+    if(this.values.length > 0) {
+      this.values[0] = end
       this.sinkDown()
-    } else this.values.pop()
+    }
 
     return oldRoot
   }

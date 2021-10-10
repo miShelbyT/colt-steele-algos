@@ -16,3 +16,16 @@ heaps are commonly used with Priority Queues and graph traversal
 
 removal from a heap means extracting the root (top node) and then re-settling the rest of the heap. also called sink down, 
 down heap, bubble down, percolate down and a slew of other things.
+
+Priority Queue is an abstract concept where each element has a priority. Elements with higher priorities
+are served before elements with lower priorities. i.e., emergency room example. patients with emergent conditions are taken before others
+
+heaps are good data structures for a priority queue because insertion/removal is (worst case) O(log n) time (actually O (log base 2/n))
+this is because we don't have to check every single element, we can jump by row (looking for parent) using Math.floor(index - 1 / 2)
+
+if we were to use a standard list where we had to check every single element we'd be at O(n)
+
+Big O:
+insertion / removal : O(log n) - close to constant time!!! (remember that O(n log n) is worse time than O(log n)) && O(n**2) is worse than O(n log n)
+search (worst case): O(n) - we could have to visit every node to find the correct value. there is no rule saying it has to be at any particular
+location, just that it must be smaller than the parent and its parent and its parent...... (for max binary heap)
