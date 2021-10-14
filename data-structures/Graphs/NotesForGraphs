@@ -27,3 +27,33 @@ how do you traverse a graph when there is no distinct entrypoint? we just to spe
 
 BFS - we traverse all neighbors before we traverse the neighbors' neighbors. distance between nodes is "height"
 if nodes are adjacent we say they have a height of 1. if there is a node between two nodes they have a height of 2
+
+Dijkstra's algorithm: shortest path algorithm for traversing a weighted graph
+
+// as per image in screenshot in this file:
+//start our object with shortest distance from "A" to each node initialized for each value:
+const shortestDistance = {
+  A: 0,
+  B: Infinity, // 4 is less than infinity so we change it to 4
+  C: Infinity, // 2 is less than infinity so we change it to 2
+  D: Infinity, // becomes 4 (A to C is 2, C to D is 2)
+  E: Infinity, // becomes 7 (A to B is 4, B to E is 3)
+  F: Infinity, // becomes 6 (A to C is 2, C to F is 4)// updates to 5 (A to C is 2, C to D is 2, D to F is 1)
+}
+
+Shortest Path From A to E
+//start with shortest value first and set it into visited array, then check the distance between A and its neighbors
+//then once that is done we start the process again, picking the neighbor with the shortest distance between them
+
+const visited = [A,C,B,D]
+
+// set object (to show us the shortest path)
+
+const previous = { 
+  A: null,
+  B: null, // change from null to A
+  C: null, // change from null to A
+  D: null, // change from null to C
+  E: null, // change from null to B
+  F: null, // change from null to C // changes to D
+}
