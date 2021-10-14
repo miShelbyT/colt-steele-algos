@@ -1,0 +1,29 @@
+What is a graph??
+data stored as a bunch of nodes with connections between those nodes - real world examples are: 
+maps (locations that link to other locations along roads, paths, etc), 
+social media network connections, 
+networks of webpages that link to other webpages (like Wikipedia),
+AI recommendations on websites/apps
+SO MUCH MORE
+
+Vertex is a node
+Edge is a connection between two nodes
+
+linked lists and trees are technically types of graphs because they have nodes with connections!
+however, with a tree, there is only one possible path from one node to another. 
+with a generic graph there may be more than one path
+
+undirected graph: unlike a singly linked list, there is no distinct direction from one node to another
+the relationship goes both ways
+
+directed graph is like a bunch of one way roads between the vertices. 
+or like instagram or twitter where users follow a celebrity and the celebrity may not follow them back
+
+weighted vs unweighted graph: when we assign value to the edges the UNweighted graph becomes a weighted graph
+
+
+how do you traverse a graph when there is no distinct entrypoint? we just to specify our start point in the algorithm
+-- we need to visit/update/check each node/vertex (at least for starters)
+
+BFS - we traverse all neighbors before we traverse the neighbors' neighbors. distance between nodes is "height"
+if nodes are adjacent we say they have a height of 1. if there is a node between two nodes they have a height of 2

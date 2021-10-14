@@ -1,0 +1,30 @@
+Hash table is a data structure used to store key-value pairs. 
+They are similar to arrays, however unlike an array, keys are not ordered and they do not have to be numeric.
+
+Unlike arrays, hash tables are very fast for finding, adding and removing values. 
+(In an array, adding and removing often require a lot of shufflling/reindexing of indices)
+
+built ins:
+Python has Dictionary
+JavaScript has Objects and Maps
+Java, Go and Scala have Maps
+Ruby has Hashes
+
+
+//hashing: taking a piece of data of any size and spitting it out to a fixed size (this will be the key in our Hashtable).
+//**important: hash function needs to be fast, O(1), 
+//**data should be distributed evenly (so for instance most data doesn't drop into indexes 2 and 5)
+//**needs to be deterministic/consistent. "pink" should hash to the same output every time
+
+hash functions often make use of prime numbers to randomize the output and greatly reduce collisions
+
+handling collisions: 
+1) separate chaining - store data in same spot as a nested list i.e, [["key1", "val1"], ["key2", "val2"]]
+2) linear probing - if we find a collision, we do not store in the same slot. we iterate until we find the next empty slot
+
+Big O (average/best case):
+insertion O(1)
+deletion O(1)
+access O(1)
+
+if our hash function was terrible and all the data was stored in one memory slot, then we'd have O(n) time to access data because we'd be iterating thru all the data. but with a good hash function we are minimizing the amount of iterating/searching we have to do, because we don't have an inordinate amount of key value pairs at each memory slot
